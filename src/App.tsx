@@ -5,6 +5,7 @@ import { Header } from './components/layout/Header';
 import { Dashboard } from './pages/Dashboard';
 import { Clientes } from './pages/Clientes';
 import { OrdenesTrabajoList } from './pages/OrdenesTrabajoList';
+import { Vehiculos } from './pages/Vehiculos';
 
 function App() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
@@ -20,7 +21,7 @@ function App() {
       case '/ordenes':
         return <OrdenesTrabajoList />;
       case '/vehiculos':
-        return <div className="p-6">Vehículos (En desarrollo)</div>;
+        return <Vehiculos />;
       case '/recordatorios':
         return <div className="p-6">Recordatorios (En desarrollo)</div>;
       case '/inventario':

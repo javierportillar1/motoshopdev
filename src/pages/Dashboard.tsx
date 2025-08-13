@@ -68,14 +68,17 @@ export function Dashboard() {
   };
 
   return (
-    <div className="p-6 space-y-6">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="p-6 space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-gray-900 to-blue-600 bg-clip-text text-transparent">
+          Dashboard
+        </h1>
         <p className="text-gray-600 mt-2">Vista general del taller</p>
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <StatsCard
           title="Órdenes Abiertas"
           value={stats.ordenesAbiertas}
@@ -100,7 +103,7 @@ export function Dashboard() {
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <StatsCard
           title="Órdenes Hoy"
           value={stats.ordenesHoy}
@@ -126,8 +129,8 @@ export function Dashboard() {
       </div>
 
       {/* Recent Orders */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <Card>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <Card className="shadow-xl border-0 bg-white/80 backdrop-blur-sm">
           <CardHeader>
             <CardTitle>Órdenes Recientes</CardTitle>
           </CardHeader>
@@ -158,7 +161,7 @@ export function Dashboard() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="shadow-xl border-0 bg-white/80 backdrop-blur-sm">
           <CardHeader>
             <CardTitle>Alertas y Notificaciones</CardTitle>
           </CardHeader>
@@ -190,6 +193,7 @@ export function Dashboard() {
             </div>
           </CardContent>
         </Card>
+      </div>
       </div>
     </div>
   );
